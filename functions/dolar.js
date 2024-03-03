@@ -3,6 +3,30 @@ import cheerio from 'cheerio';
 
 const URL = 'https://www.infobae.com/economia/divisas/dolar-hoy/';
 
+export async function handler(event, context) {
+    try {
+        const dolarBancoNacion = await getDolarBancoNacion();
+        const dolarTurista = await getDolarTurista();
+        const dolarMEP = await getDolarMEP();
+        const dolarLibre = await getDolarLibre();
+
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ 
+                dolarBancoNacion,
+                dolarTurista,
+                dolarMEP,
+                dolarLibre
+            })
+        };
+    } catch (error) {
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ error: 'Error al obtener los valores del dólar' })
+        };
+    }
+}
+
 async function getDolarBancoNacion() {
     try {
         const response = await axios.get(URL);
@@ -79,19 +103,3 @@ async function getDolarLibre() {
     }
 }
 
-// Ejemplo de cómo utilizar los métodos
-// async function main() {
-//     const dolarBancoNacion = await getDolarBancoNacion();
-//     console.log('Dólar Banco Nación:', dolarBancoNacion);
-
-//     const dolarTurista = await getDolarTurista();
-//     console.log('Dólar Turista:', dolarTurista);
-
-//     const dolarMEP = await getDolarMEP();
-//     console.log('Dólar MEP:', dolarMEP);
-
-//     const dolarLibre = await getDolarLibre();
-//     console.log('Dólar Libre:', dolarLibre);
-// }
-
-// main();
