@@ -80,18 +80,18 @@ async function getDolarLibre() {
 }
 
 // Ejemplo de cómo utilizar los métodos
-async function main() {
-    const dolarBancoNacion = await getDolarBancoNacion();
-    console.log('Dólar Banco Nación:', dolarBancoNacion);
+// async function main() {
+//     const dolarBancoNacion = await getDolarBancoNacion();
+//     console.log('Dólar Banco Nación:', dolarBancoNacion);
 
-    const dolarTurista = await getDolarTurista();
-    console.log('Dólar Turista:', dolarTurista);
+//     const dolarTurista = await getDolarTurista();
+//     console.log('Dólar Turista:', dolarTurista);
 
-    const dolarMEP = await getDolarMEP();
-    console.log('Dólar MEP:', dolarMEP);
+//     const dolarMEP = await getDolarMEP();
+//     console.log('Dólar MEP:', dolarMEP);
 
-    const dolarLibre = await getDolarLibre();
-    console.log('Dólar Libre:', dolarLibre);
-}
+//     const dolarLibre = await getDolarLibre();
+//     console.log('Dólar Libre:', dolarLibre);
+// }
 
-main();
+// main();
