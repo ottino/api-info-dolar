@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild functions/*.js --bundle --platform=node --outdir=functions",
+    "build": "esbuild functions/*.js --bundle --platform=node --outdir=functions/build",
     "start": "node functions/dolar.js"
   },
   "keywords": [],
