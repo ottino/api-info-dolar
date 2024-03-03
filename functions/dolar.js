@@ -1,5 +1,7 @@
-const axios = require('axios');
-const cheerio = require('cheerio');
+
+import { default as axios } from 'axios';
+import { default as cheerio } from 'cheerio';
+
 
 
 const URL = 'https://www.infobae.com/economia/divisas/dolar-hoy/';
