@@ -5,3 +5,7 @@
   functions = "functions/"
   node_bundler = "esbuild"
   command = "npm run build"  
+
+[functions]
+  build = "npm run build"
+  command = "node functions\dolar.js"  
