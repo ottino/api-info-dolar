@@ -8,4 +8,3 @@
 
 [functions]
   build = "npm run build"
-  command = "node functions\dolar.js"  
